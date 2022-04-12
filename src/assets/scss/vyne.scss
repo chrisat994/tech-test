@@ -1,0 +1,177 @@
+@import "./bootstrap-scss/bootstrap.scss";
+@import "./bootstrap-scss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&display=swap");
+@import "./pagination.scss";
+
+
+$font_poppins: "Poppins",
+sans-serif;
+
+$border_radius:10px;
+
+body {
+    background-color: #fff;
+    font-family: $font_poppins;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+
+.history_main_wrapper {
+    .head_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .heading {
+            font-size: 24px;
+        }
+
+        .filter_wrapper {
+            position: relative;
+
+            .filter_select {
+                width: 200px;
+                padding-left: 35px;
+            }
+
+            .filter_icon {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top: 6px;
+                left: 5px;
+            }
+
+        }
+    }
+}
+
+.payment_card_wrapper {
+    width: 100%;
+    min-height: 100px;
+    background-color: #fbfafc;
+    border-radius: $border_radius;
+    border: 1px solid #cbcacc;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    .transaction_basic {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+            margin-bottom: 1px;
+        }
+
+        .tr_id {
+            color: #777777;
+            font-weight: 700;
+        }
+
+        .tr_status {
+            font-weight: 700;
+            color: $orange;
+        }
+
+        .tr_amount {
+            color: $primary;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+
+    .transaction_details_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .content_wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            .label {
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            .desc {
+                font-size: 14px;
+            }
+
+            .date_time {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:375px) {
+    .payment_card_wrapper {
+        .transaction_basic {
+            .tr_id {
+                font-size: 12px;
+            }
+            .tr_status {
+                font-size: 12px;
+            }
+            .tr_amount {
+                font-size: 12px;
+            }
+        }
+        .transaction_details_wrapper {
+            .content_wrapper {
+                .desc {
+                    font-size: 12px;
+                }
+
+                .date_time {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .history_main_wrapper {
+        .head_wrapper {
+            .heading {
+                font-size: 16px;
+            }
+            .filter_wrapper {
+                align-items: center;
+                
+    
+                .filter_select {
+                    width: 150px;
+                    padding-left: 35px;
+                }
+    
+                .filter_icon {
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    top: 6px;
+                    left: 5px;
+                }
+    
+            }
+        }
+    }
+}

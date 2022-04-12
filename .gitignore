@@ -10,6 +10,8 @@
 
 # production
 /build
+/.DS_Store
+/.sass-cache
 
 # misc
 .DS_Store
